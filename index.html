@@ -1,13 +1,336 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startup Setu</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incubation Cell | MITIF</title>
+  <meta name="description"
+    content="The Incubation Cell of Moradabad Institute of Technology helps students turn ideas into startups through mentorship, funding support and workspace.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 900: '#0f2a43', 800: '#16385a', 700: '#1d4a75' },
+            amber: { 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: { sans: ['Segoe UI', 'system-ui', 'Roboto', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-slate-700 antialiased">
+
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+      <a href="#home" class="flex items-center gap-3">
+        <img src="./assets/logo.png" alt="Incubation Cell logo" class="h-10 w-10 rounded-full">
+        <div class="leading-tight">
+          <p class="text-lg font-bold text-navy-900">Nirman</p>
+          <p class="text-[11px] text-slate-500">Moradabad Institute of Technology</p>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <li><a href="#home" class="nav-link text-navy-900">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-navy-900">About</a></li>
+        <li><a href="" class="nav-link hover:text-navy-900">Idea</a></li>
+        <li><a href="register.html" class="nav-link hover:text-navy-900">Register</a></li>
+        <li><a href="./funding.html" class="nav-link hover:text-navy-900">Funding</a></li>
+        <li><a href="#contact" class="nav-link hover:text-navy-900">Contact</a></li>
+      </ul>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="login.html"
+          class="px-4 py-2 text-sm font-semibold text-white bg-amber-500 rounded-lg hover:bg-amber-600 transition">Login</a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle menu"
+        aria-expanded="false">
+        <svg class="h-6 w-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <ul class="px-4 py-3 space-y-1 text-sm font-medium">
+        <li><a href="#home" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Home</a></li>
+        <li><a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-100">About</a></li>
+        <li><a href="" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Idea</a></li>
+        <li><a href="./register.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Register</a></li>
+        <li><a href="./funding.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Funding</a></li>
+        <li><a href="#contact" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Contact</a></li>
+        <li class="flex gap-2 pt-2">
+          <a href="login.html"
+            class="flex-1 text-center px-4 py-2 font-semibold text-white bg-amber-500 rounded-lg">Login</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-block text-xs font-semibold tracking-widest text-amber-500 uppercase mb-4">Student Startup
+            Incubator</p>
+          <h1 class="text-4xl sm:text-5xl font-bold leading-tight">MITIF PRESENTS <span
+              class="text-amber-500">NIRMAN</span>.</h1>
+          <p class="mt-5 text-lg text-slate-300 max-w-xl">The Incubation Cell of MITGI gives student
+            founders mentorship, workspace, funding connections and a network to build ventures that last.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#apply" class="px-6 py-3 font-semibold bg-amber-500 rounded-lg hover:bg-amber-600 transition">Apply
+              for Incubation</a>
+            <a href="#programs"
+              class="px-6 py-3 font-semibold border border-white/40 rounded-lg hover:bg-white/10 transition">Explore
+              Programs</a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white/10 p-6 text-center">
+            <p class="counter text-4xl font-bold text-amber-500" data-target="50">0</p>
+            <p class="mt-1 text-sm text-slate-300">Startups Incubated</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6 text-center">
+            <p class="counter text-4xl font-bold text-amber-500" data-target="120">0</p>
+            <p class="mt-1 text-sm text-slate-300">Mentors &amp; Experts</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6 text-center">
+            <p class="counter text-4xl font-bold text-amber-500" data-target="30">0</p>
+            <p class="mt-1 text-sm text-slate-300">Events Hosted</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6 text-center">
+            <p class="counter text-4xl font-bold text-amber-500" data-target="500">0</p>
+            <p class="mt-1 text-sm text-slate-300">Students Reached</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sm font-semibold text-amber-600 uppercase tracking-widest">About Us</p>
+        <h2 class="mt-2 text-3xl font-bold text-navy-900">Where student ideas find support</h2>
+        <p class="mt-4">We are the startup and innovation hub of MITGI. Our goal is to build an
+          entrepreneurial culture on campus and help students and alumni move from a rough idea to a working product and
+          a registered venture.</p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex gap-3"><span class="text-amber-500 font-bold">&#10003;</span> Mission: nurture innovators and
+            job creators</li>
+          <li class="flex gap-3"><span class="text-amber-500 font-bold">&#10003;</span> Open to students, faculty and
+            alumni</li>
+          <li class="flex gap-3"><span class="text-amber-500 font-bold">&#10003;</span> Connected with industry,
+            investors and government schemes</li>
+        </ul>
+      </div>
+      <div
+        class="rounded-2xl bg-slate-100 border border-slate-200 aspect-video flex items-center justify-center text-slate-400 text-sm">
+        <img src="./assets/incubation.png" alt="" class="rounded-xl">
+      </div>
+
+      <div class="professors_images max-w-7xl flex gap-4 ml-20">
+        <img src="#" alt="" class="h-[400px] w-[500px] rounded-xl">
+        <img src="#" alt="" class="h-[400px] w-[400px] rounded-xl">
+        <img src="#" alt="" class="h-[400px] w-[500px] rounded-xl">
+      </div>
+    </section>
+
+    <!--PROGRAMS-->
+    <section id="programs" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-sm font-semibold text-amber-600 uppercase tracking-widest">What We Offer</p>
+          <h2 class="mt-2 text-3xl font-bold text-navy-900">Everything a young startup needs</h2>
+        </div>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Mentorship</h3>
+            <p class="mt-2 text-sm">One-on-one guidance from founders, industry experts and faculty.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Workspace &amp; Labs</h3>
+            <p class="mt-2 text-sm">Co-working desks, prototyping tools and meeting rooms on campus.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Funding Support</h3>
+            <p class="mt-2 text-sm">Seed grants, pitch days and introductions to angels and VCs.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Training &amp; Workshops</h3>
+            <p class="mt-2 text-sm">Business planning, pitching, finance, marketing and legal basics.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Legal &amp; IP Help</h3>
+            <p class="mt-2 text-sm">Support with company registration, trademarks and patent filing.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition">
+            <h3 class="font-bold text-navy-900">Industry Network</h3>
+            <p class="mt-2 text-sm">Pilot projects, internships and partnerships with companies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-sm font-semibold text-amber-600 uppercase tracking-widest">How It Works</p>
+        <h2 class="mt-2 text-3xl font-bold text-navy-900">From idea to incubation in 4 steps</h2>
+      </div>
+      <ol class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <li class="text-center">
+          <div
+            class="mx-auto h-12 w-12 rounded-full bg-navy-900 text-amber-500 font-bold flex items-center justify-center">
+            1</div>
+          <h3 class="mt-4 font-bold text-navy-900">Apply</h3>
+          <p class="mt-1 text-sm">Submit your idea and team details online.</p>
+        </li>
+        <li class="text-center">
+          <div
+            class="mx-auto h-12 w-12 rounded-full bg-navy-900 text-amber-500 font-bold flex items-center justify-center">
+            2</div>
+          <h3 class="mt-4 font-bold text-navy-900">Screening</h3>
+          <p class="mt-1 text-sm">Pitch to our committee of mentors and faculty.</p>
+        </li>
+        <li class="text-center">
+          <div
+            class="mx-auto h-12 w-12 rounded-full bg-navy-900 text-amber-500 font-bold flex items-center justify-center">
+            3</div>
+          <h3 class="mt-4 font-bold text-navy-900">Incubate</h3>
+          <p class="mt-1 text-sm">Get mentors, workspace and build your MVP.</p>
+        </li>
+        <li class="text-center">
+          <div
+            class="mx-auto h-12 w-12 rounded-full bg-navy-900 text-amber-500 font-bold flex items-center justify-center">
+            4</div>
+          <h3 class="mt-4 font-bold text-navy-900">Launch &amp; Scale</h3>
+          <p class="mt-1 text-sm">Demo day, funding access and market launch.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!--STARTUPS-->
+    <section id="startups" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-sm font-semibold text-amber-600 uppercase tracking-widest">Our Startups</p>
+          <h2 class="mt-2 text-3xl font-bold text-navy-900">Ventures built here</h2>
+        </div>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-6 border border-slate-200"><span
+              class="text-xs font-semibold px-2 py-1 rounded bg-amber-500/15 text-amber-600">EdTech</span>
+            <h3 class="mt-3 font-bold text-navy-900">Startup Name 1</h3>
+            <p class="mt-1 text-sm">Short one-line description of what this startup does.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200"><span
+              class="text-xs font-semibold px-2 py-1 rounded bg-amber-500/15 text-amber-600">AgriTech</span>
+            <h3 class="mt-3 font-bold text-navy-900">Startup Name 2</h3>
+            <p class="mt-1 text-sm">Short one-line description of what this startup does.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200"><span
+              class="text-xs font-semibold px-2 py-1 rounded bg-amber-500/15 text-amber-600">HealthTech</span>
+            <h3 class="mt-3 font-bold text-navy-900">Startup Name 3</h3>
+            <p class="mt-1 text-sm">Short one-line description of what this startup does.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="apply" class="px-4 sm:px-6 pb-20">
+      <div class="max-w-5xl mx-auto rounded-3xl bg-navy-900 text-white text-center px-6 py-14">
+        <h2 class="text-3xl font-bold">Have an idea? Let's build it together.</h2>
+        <p class="mt-3 text-slate-300">Applications are open throughout the year for students, faculty and alumni.</p>
+        <a href="./nirman_registration/index.html"
+          class="inline-block mt-7 px-7 py-3 font-semibold bg-amber-500 rounded-lg hover:bg-amber-600 transition">Register
+          Your Startup</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-navy-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="./assets/logo.png" alt="Logo" class="h-10 w-10">
+          <p class="text-lg font-bold text-white">NIRMAN by MITIF</p>
+        </div>
+        <p class="mt-4 text-sm">Supporting student innovators and entrepreneurs of Moradabad Institute of Technology,
+          Moradabad since 1996.</p>
+        <div class="mt-5 flex gap-3 text-xs font-semibold">
+          <a href="#"
+            class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">LinkedIn</a>
+          <a href="#"
+            class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">Instagram</a>
+          <a href="#" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">X</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-amber-500">About Us</a></li>
+          <li><a href="#programs" class="hover:text-amber-500">Programs</a></li>
+          <li><a href="#process" class="hover:text-amber-500">Incubation Process</a></li>
+          <li><a href="#startups" class="hover:text-amber-500">Our Startups</a></li>
+          <li><a href="#events" class="hover:text-amber-500">Events</a></li>
+          <li><a href="#" class="hover:text-amber-500">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white mb-4">Contact Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li><span class="text-white font-medium">Address:</span><br>Incubation Cell, Moradabad Institute of
+            Technology, Ram Ganga Vihar, Phase – II, Moradabad – 244001, Uttar
+            Pradesh, India</li>
+          <li><span class="text-white font-medium">Phone:</span> <a href="tel:+910000000000"
+              class="hover:text-amber-500">+91 7668055739</a></li>
+          <li><span class="text-white font-medium">Email:</span> <a href="mailto:incubation@yourcollege.edu"
+              class="hover:text-amber-500">himanshuatmbd@gmail.com</a></li>
+          <li><span class="text-white font-medium">Office Hours:</span><br>Mon - Sat, 09:00 AM - 05:00 PM</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+        <p class="text-sm">Get news on events, calls for applications and funding opportunities.</p>
+        <form id="newsletterForm" class="mt-4 flex flex-col gap-2">
+          <input id="newsletterEmail" type="email" required placeholder="Your email address"
+            class="px-3 py-2 rounded-lg text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <button type="submit"
+            class="px-4 py-2 text-sm font-semibold bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Subscribe</button>
+          <p id="newsletterMsg" class="text-xs text-amber-500 hidden">Thanks for subscribing!</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs">
+        <p>&copy; <span id="year"></span> Incubation Cell, MITGI. All rights reserved.</p>
+        <div class="flex gap-4"><a href="#" class="hover:text-amber-500">Privacy Policy</a><a href="#"
+            class="hover:text-amber-500">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop"
+    class="hidden fixed bottom-6 right-6 h-11 w-11 rounded-full bg-amber-500 text-white shadow-lg hover:bg-amber-600"
+    aria-label="Back to top">&uarr;</button>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

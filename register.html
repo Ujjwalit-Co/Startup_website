@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incubation Cell | Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-navy-900: #0f2a43;
+            --color-navy-800: #16385a;
+        }
+    </style>
+</head>
+
+<body class="text-slate-700 antialiased overflow-x-hidden">
+    <header class="fixed top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+            <a href="#home" class="flex items-center gap-3">
+                <img src="./assets/logo.png" alt="Incubation Cell logo" class="h-10 w-10 rounded-full">
+                <div class="leading-tight">
+                    <p class="text-lg font-bold text-navy-900">Nirman</p>
+                    <p class="text-[11px] text-slate-500">Moradabad Institute of Technology</p>
+                </div>
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-7 text-sm font-medium">
+                <li><a href="index.html" class="nav-link text-navy-900">Home</a></li>
+                <li><a href="./index.html" class="nav-link hover:text-navy-900">About</a></li>
+                <li><a href="" class="nav-link hover:text-navy-900">Idea</a></li>
+                <li><a href="register.html" class="nav-link hover:text-navy-900">Register</a></li>
+                <li><a href="./funding.html" class="nav-link hover:text-navy-900">Funding</a></li>
+                <li><a href="#contact" class="nav-link hover:text-navy-900">Contact</a></li>
+            </ul>
+
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="login.html"
+                    class="px-4 py-2 text-sm font-semibold text-white bg-amber-500 rounded-lg hover:bg-amber-600 transition">Login</a>
+            </div>
+
+            <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle menu"
+                aria-expanded="false">
+                <svg class="h-6 w-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white">
+            <ul class="px-4 py-3 space-y-1 text-sm font-medium">
+                <li><a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Home</a></li>
+                <li><a href="./index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">About</a></li>
+                <li><a href="" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Idea</a></li>
+                <li><a href="register.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Register</a></li>
+                <li><a href="./funding.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Funding</a></li>
+                <li><a href="#contact" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Contact</a></li>
+                <li class="flex gap-2 pt-2">
+                    <a href="login.html"
+                        class="flex-1 text-center px-4 py-2 font-semibold text-white bg-amber-500 rounded-lg">Login</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="registration flex justify-center px-4 sm:px-6 py-8 md:py-12">
+        <div class="w-full max-w-6xl">
+            <div class="container w-full rounded-lg border-2">
+                <div class="registration_header flex flex-col px-5 py-8 sm:px-8 md:py-10 justify-center">
+                    <h6>MIT · NIRMAN INCUBATION CENTRE</h6>
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold my-3">Have an Idea? Let's Build It Together.
+                    </h1>
+                    <p class="text-sm sm:text-base max-w-2xl">A platform for aspiring entrepreneurs to develop ideas,
+                        build startups and access
+                        incubation support.
+                    </p>
+                    <div class="registration_btn mt-2">
+                        <button id="registrer_startup_btn"
+                            class="register_startup inline-flex items-center justify-center gap-1 w-full sm:w-auto border-2 px-4 py-3 rounded-md cursor-pointer font-bold"><a
+                                href="./nirman_registration/index.html">Register Your Startup</a> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about_incubation px-4 py-8 md:py-10">
+                <div class="about_header">
+                    <h1 class="text-2xl font-bold">What is Nirman Incubation Centre?</h1>
+                    <p>A short introduction explaining the centre's purpose, its support for startup founders, and the
+                        opportunities available through the incubation programme.</p>
+                </div>
+                <div class="incubation_content_cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full py-4">
+                    <div
+                        class="card incubation_space min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-building" viewBox="0 0 16 16">
+                            <path
+                                d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                            <path
+                                d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                        </svg>
+                        <h1 class="text-base font-bold">Incubation Space</h1>
+                        <p>Workspace and facilities, subject to availability.</p>
+                    </div>
+
+                    <div
+                        class="card incubation_space min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                        </svg>
+                        <h1 class="text-base font-bold">Mentorship</h1>
+                        <p>Guidance to develop and improve your startup.</p>
+                    </div>
+
+                    <div
+                        class="card incubation_space min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-court" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0 1 3.5V5h14V3.5L8 0zM2 6v6H1v1h14v-1h-1V6h-2v6h-2V6H9v6H7V6H6v6H4V6H2zm-1 8v1h14v-1H1zm0 2v1h14v-1H1z" />
+                        </svg>
+
+                        <h1 class="text-base font-bold">Funding Opportunities</h1>
+                        <p>Potential support through applicable government schemes.</p>
+                    </div>
+
+                    <div
+                        class="card incubation_space min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z" />
+                            <path
+                                d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925" />
+                        </svg>
+
+                        <h1 class="text-base font-bold">Startup Development</h1>
+                        <p>Support for turning ideas into viable products and businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply_eligibility flex justify-center px-4 sm:px-6 py-8 md:py-12">
+        <div class="apply_header_content w-full max-w-6xl">
+            <h1 class="text-2xl font-bold px-4">Who Can Apply?</h1>
+            <p class="px-4">Nirman Incubation Centre welcomes aspiring entrepreneurs who want to transform their
+                innovative ideas into successful startups. Whether you are a student of MIT or an external
+                applicant, you can apply for incubation support as per the centre's eligibility criteria.</p>
+
+            <div class="student_varity px-4 sm:px-6 bg-gray-200 w-full mt-8 py-5 rounded-xl space-y-6">
+                <div class="mitians">
+                    <h1 class="text-lg font-bold">1. MIT Students</h1>
+                    <div class="mx-0 sm:mx-8 mt-1">
+                        <h1 class="mit_innovator font-bold underline">Empowering Student Innovators</h1>
+                        <p>Are you an MIT student with a startup idea or an entrepreneurial vision? Apply to Nirman
+                            Incubation Centre to explore opportunities for mentorship, workspace, technical support,
+                            and potential funding assistance.</p>
+
+                        <ul class="eligibility-list list-disc pl-5 mt-2 space-y-1">
+                            <li>Open to MIT students with startup ideas or ventures.</li>
+                            <li>Application Fee: <b>Free.</b></li>
+                            <li>Access to incubation opportunities, subject to approval and availability.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="outsiders">
+                    <h1 class="text-lg font-bold">2. External Applicants</h1>
+                    <div class="mx-0 sm:mx-8 mt-1">
+                        <h1 class="mit_innovator font-bold underline">Welcoming Entrepreneurs Beyond MIT</h1>
+                        <p>Are you a student from another institution, a working professional, or an independent
+                            entrepreneur? Nirman Incubation Centre welcomes eligible external applicants who are
+                            passionate about building innovative and scalable startups.</p>
+
+                        <ul class="eligibility-list list-disc pl-5 mt-2 space-y-1">
+                            <li>Open to eligible students, working professionals, and freelancers.</li>
+                            <li>Application Fee: Applicable as per the approved fee policy.</li>
+                            <li>Incubation and mentorship opportunities, subject to eligibility and approval.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note px-4 mt-5">
+                <p><b>Important Note:-</b> No payment is required during registration. External
+                    applicants will receive
+                    the applicable fee details and payment instructions after approval. Incubation space and funding are
+                    subject to availability, eligibility, and the centre's policies.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="startup_stages flex justify-center px-4 sm:px-6 py-8 md:py-12">
+        <div class="stages_header_content w-full max-w-6xl">
+            <h1 class="text-2xl font-bold px-4">Startup Eligibility And Stages</h1>
+
+            <div class="startup_stages_cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full py-4">
+                <div
+                    class="card idea min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-building" viewBox="0 0 16 16">
+                        <path
+                            d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                        <path
+                            d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                    </svg>
+                    <h1 class="text-base font-bold">1. Idea Stage</h1>
+                    <p>You have identified a problem and are developing your proposed solution.</p>
+                </div>
+
+                <div
+                    class="card prototype_stage min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg>
+                    <h1 class="text-base font-bold">2. Prototype Stage</h1>
+                    <p>You are testing your idea or building an early version of your product.</p>
+                </div>
+
+                <div
+                    class="card mvp_stage min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-court" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0 1 3.5V5h14V3.5L8 0zM2 6v6H1v1h14v-1h-1V6h-2v6h-2V6H9v6H7V6H6v6H4V6H2zm-1 8v1h14v-1H1zm0 2v1h14v-1H1z" />
+                    </svg>
+
+                    <h1 class="text-base font-bold">3. MVP Stage</h1>
+                    <p>You have developed a minimum viable product and are validating it with users.</p>
+                </div>
+
+                <div
+                    class="card revenue_stage min-h-[7.5rem] w-full bg-gray-200 flex flex-col justify-center px-5 py-4 rounded-lg">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z" />
+                        <path
+                            d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925" />
+                    </svg>
+
+                    <h1 class="text-base font-bold">4. Revenue Stage</h1>
+                    <p>Your startup is operating and generating revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="required_documents flex justify-center px-4 sm:px-6 py-8 md:py-12">
+        <div class="document_content w-full max-w-6xl">
+
+            <h1 class="text-2xl font-bold px-4">Documents Required</h1>
+
+            <div class="overflow-x-auto mt-3 px-4">
+                <table class="w-full min-w-[32rem] text-left text-sm sm:text-base border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="px-3 py-2 bg-slate-100 border-b border-slate-300 font-semibold">Document</th>
+                            <th class="px-3 py-2 bg-slate-100 border-b border-slate-300 font-semibold">Applicant Type
+                            </th>
+                            <th class="px-3 py-2 bg-slate-100 border-b border-slate-300 font-semibold">Requirement</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border-b border-slate-200">College ID Card</td>
+                            <td class="px-3 py-2 border-b border-slate-200">MIT Students</td>
+                            <td class="px-3 py-2 border-b border-slate-200">Required</td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-3 py-2 border-b border-slate-200">ID Proof</td>
+                            <td class="px-3 py-2 border-b border-slate-200">External Applicants</td>
+                            <td class="px-3 py-2 border-b border-slate-200">Required</td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-3 py-2 border-b border-slate-200">DPIIT Certificate</td>
+                            <td class="px-3 py-2 border-b border-slate-200">Recognized Startups</td>
+                            <td class="px-3 py-2 border-b border-slate-200">When applicable</td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-3 py-2 border-b border-slate-200">Pitch Deck</td>
+                            <td class="px-3 py-2 border-b border-slate-200">All Applicants</td>
+                            <td class="px-3 py-2 border-b border-slate-200">Optional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note px-4 mt-3">
+                <p><b>Important Note:-</b>Keep the relevant documents ready before starting your
+                    application. The
+                    documents required may vary according to applicant type and the support or funding being requested.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-navy-900 text-slate-300 mt-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+            <div>
+                <div class="flex items-center gap-3">
+                    <img src="./assets/logo.png" alt="Logo" class="h-10 w-10">
+                    <p class="text-lg font-bold text-white">NIRMAN by MITIF</p>
+                </div>
+                <p class="mt-4 text-sm">Supporting student innovators and entrepreneurs of Moradabad Institute of
+                    Technology,
+                    Moradabad since 1996.</p>
+                <div class="mt-5 flex gap-3 text-xs font-semibold">
+                    <a href="#"
+                        class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">LinkedIn</a>
+                    <a href="#"
+                        class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">Instagram</a>
+                    <a href="#"
+                        class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-amber-500 hover:text-navy-900 transition">X</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-amber-500">About Us</a></li>
+                    <li><a href="#programs" class="hover:text-amber-500">Programs</a></li>
+                    <li><a href="#process" class="hover:text-amber-500">Incubation Process</a></li>
+                    <li><a href="#startups" class="hover:text-amber-500">Our Startups</a></li>
+                    <li><a href="#events" class="hover:text-amber-500">Events</a></li>
+                    <li><a href="#" class="hover:text-amber-500">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-white mb-4">Contact Us</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><span class="text-white font-medium">Address:</span><br>Incubation Cell, Moradabad Institute of
+                        Technology, Ram Ganga Vihar, Phase – II, Moradabad – 244001, Uttar
+                        Pradesh, India</li>
+                    <li><span class="text-white font-medium">Phone:</span> <a href="tel:+910000000000"
+                            class="hover:text-amber-500">+91 7668055739</a></li>
+                    <li><span class="text-white font-medium">Email:</span> <a href="mailto:incubation@yourcollege.edu"
+                            class="hover:text-amber-500">himanshuatmbd@gmail.com</a></li>
+                    <li><span class="text-white font-medium">Office Hours:</span><br>Mon - Sat, 09:00 AM - 05:00 PM</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                <p class="text-sm">Get news on events, calls for applications and funding opportunities.</p>
+                <form id="newsletterForm" class="mt-4 flex flex-col gap-2">
+                    <input id="newsletterEmail" type="email" required placeholder="Your email address"
+                        class="px-3 py-2 rounded-lg text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <button type="submit"
+                        class="px-4 py-2 text-sm font-semibold bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Subscribe</button>
+                    <p id="newsletterMsg" class="text-xs text-amber-500 hidden">Thanks for subscribing!</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs">
+                <p>&copy; <span id="year"></span> Incubation Cell, MITGI. All rights
+                    reserved.</p>
+                <div class="flex gap-4"><a href="#" class="hover:text-amber-500">Privacy Policy</a><a href="#"
+                        class="hover:text-amber-500">Terms of Use</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('newsletterMsg').classList.remove('hidden');
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>

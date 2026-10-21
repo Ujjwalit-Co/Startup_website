@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NIRMAN</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <main class="login-shell">
+        <section class="login-top"><img class="login-logo" src="./assets/logo.png" alt="SamadhanAI">
+            <h1>Nirman</h1>
+            <p>NIRMAN by the Incubation cell of MITIF</p>
+        </section>
+        <section class="login-body">
+            <div class="tabs"><button id="loginTab" class="active" type="button">Login</button><button id="registerTab"
+                    type="button">Create Account</button></div>
+            <div id="authMessage" class="auth-message"></div>
+            <form id="loginForm" class="auth-form active">
+                <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" required
+                        autocomplete="email" placeholder="you@example.com"></div>
+                <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password"
+                        required autocomplete="current-password" placeholder="Enter password"></div><button
+                    class="auth-submit" type="submit">Login</button>
+            </form>
+            <form id="registerForm" class="auth-form">
+                <div class="field"><label for="registerName">Full Name</label><input id="registerName" type="text"
+                        required autocomplete="name" placeholder="Your full name"></div>
+                <div class="field"><label for="registerEmail">Email</label><input id="registerEmail" type="email"
+                        required autocomplete="email" placeholder="you@example.com"></div>
+                <div class="field"><label for="registerPassword">Password</label><input id="registerPassword"
+                        type="password" minlength="6" required autocomplete="new-password"
+                        placeholder="At least 6 characters"></div><button class="auth-submit" type="submit">Create
+                    Account</button>
+            </form>
+            <a class="back-home" href="index.html">← Back to Home</a>
+            <p class="disclaimer">Nirman is a college incubation platform designed to support student innovators,
+                nurture startup ideas, and streamline the journey from ideation to entrepreneurship.</p>
+        </section>
+    </main>
+    <script src="auth.js"></script>
+</body>
+
+</html>
