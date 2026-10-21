@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nirman Incubation Centre startup registration form">
+  <title>Nirman Incubation Centre | Startup Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+</head>
+
+<body>
+
+  <main>
+    <section id="registration" class="registration-section">
+      <div class="registration-heading">
+        <span class="eyebrow green">APPLICATION FORM</span>
+        <h2>Register your startup</h2>
+        <p>Complete each step. Fields marked <span class="required">*</span> are required.</p>
+      </div>
+
+      <div class="form-shell">
+        <div class="stepper" aria-label="Registration progress">
+          <div class="stepper-item active" data-step-indicator="0"><span>1</span><small>Personal & team</small></div>
+          <div class="stepper-line"></div>
+          <div class="stepper-item" data-step-indicator="1"><span>2</span><small>Startup details</small></div>
+          <div class="stepper-line"></div>
+          <div class="stepper-item" data-step-indicator="2"><span>3</span><small>Requirements</small></div>
+          <div class="stepper-line"></div>
+          <div class="stepper-item" data-step-indicator="3"><span>✓</span><small>Review</small></div>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <form id="registrationForm" novalidate>
+          <!-- STEP 1 -->
+          <fieldset class="form-step active" data-step="0">
+            <div class="form-step-heading"><span class="step-kicker">STEP 01</span>
+              <h3>Personal & team information</h3>
+              <p>First, tell us who you are and how to contact you.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field full"><label for="applicantType">Applicant type <span class="required">*</span></label>
+                <div class="choice-grid">
+                  <label class="choice-card"><input type="radio" name="applicantType" value="MIT Student" required><span
+                      class="choice-symbol"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                        <path
+                          d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z" />
+                        <path
+                          d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z" />
+                      </svg></span><strong>MIT Student</strong><small>Currently studying at
+                      MIT</small></label>
+                  <label class="choice-card"><input type="radio" name="applicantType" value="External Applicant"
+                      required><span class="choice-symbol"> <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                        height="22" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                          d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                      </svg></span><strong>External applicant</strong><small>Applying
+                      from outside MIT</small></label>
+                </div><small class="field-hint">Choose one option to display the relevant fields.</small>
+              </div>
+              <div class="field"><label for="fullName">Full name <span class="required">*</span></label><input
+                  id="fullName" name="fullName" autocomplete="name" required placeholder="Enter your full name"></div>
+              <div class="field"><label for="email">Email address <span class="required">*</span></label><input
+                  id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+              </div>
+              <div class="field"><label for="phone">WhatsApp / phone number <span
+                    class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"
+                  required pattern="[0-9+() .-]{8,20}" placeholder="+91 98765 43210"><small class="field-hint">Include
+                  country code if applicable.</small></div>
+              <div class="field"><label for="city">City <span class="required">*</span></label><input id="city"
+                  name="city" required autocomplete="address-level2" placeholder="Your city"></div>
+              <div class="field"><label for="state">State <span class="required">*</span></label><input id="state"
+                  name="state" required autocomplete="address-level1" placeholder="Your state"></div>
+            </div>
+
+            <div id="studentFields" class="conditional-panel hidden">
+              <div class="subsection-heading"><span>🎓</span>
+                <div>
+                  <h4>MIT student details</h4>
+                  <p>Fields for current MIT students.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field"><label for="enrollment">Enrollment number <span
+                      class="required">*</span></label><input id="enrollment" name="enrollment"
+                    placeholder="Enter enrollment number"></div>
+                <div class="field"><label for="branchYear">Branch & year <span class="required">*</span></label><input
+                    id="branchYear" name="branchYear" placeholder="e.g. CSE, 2nd year"></div>
+                <div class="field"><label for="collegeEmail">College email <span class="required">*</span></label><input
+                    id="collegeEmail" name="collegeEmail" type="email" placeholder="name@college.edu"></div>
+                <div class="field"><label for="facultyMentor">Faculty mentor (optional)</label><input id="facultyMentor"
+                    name="facultyMentor" placeholder="Mentor's name"></div>
+                <div class="field full"><label for="collegeId">College ID card <span
+                      class="required">*</span></label><input id="collegeId" name="collegeId" type="file"
+                    accept=".pdf,.jpg,.jpeg,.png"><small class="field-hint">PDF, JPG or PNG. Do not upload unnecessary
+                    personal documents.</small></div>
+              </div>
+            </div>
+
+            <div id="externalFields" class="conditional-panel hidden">
+              <div class="subsection-heading"><span>👥</span>
+                <div>
+                  <h4>External applicant details</h4>
+                  <p>Fields for applicants from outside MIT.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field"><label for="organization">College / organization <span
+                      class="required">*</span></label><input id="organization" name="organization"
+                    placeholder="Organization name"></div>
+                <div class="field"><label for="currentStatus">Current status <span
+                      class="required">*</span></label><select id="currentStatus" name="currentStatus">
+                    <option value="">Select status</option>
+                    <option>Student</option>
+                    <option>Working professional</option>
+                    <option>Freelancer</option>
+                    <option>Other</option>
+                  </select></div>
+                <div class="field full"><label for="address">Full address <span
+                      class="required">*</span></label><textarea id="address" name="address" rows="2"
+                    autocomplete="street-address" placeholder="House / street, area, city and PIN code"></textarea>
+                </div>
+                <div class="field full"><label for="idProof">Accepted ID proof <span
+                      class="required">*</span></label><input id="idProof" name="idProof" type="file"
+                    accept=".pdf,.jpg,.jpeg,.png"><small class="field-hint">Upload only a document accepted by the
+                    centre's policy. PDF, JPG or PNG.</small></div>
+              </div>
+            </div>
+
+            <div class="subsection-heading"><span>♧</span>
+              <div>
+                <h4>Team details</h4>
+                <p>Add your founding team. Include yourself in the total member count.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="teamName">Team name <span class="required">*</span></label><input
+                  id="teamName" name="teamName" required placeholder="Your team name"></div>
+              <div class="field"><label for="memberCount">Total team members <span
+                    class="required">*</span></label><input id="memberCount" name="memberCount" type="number" min="1"
+                  max="100" required value="1"></div>
+            </div>
+            <div class="team-header">
+              <div>
+                <h4>Co-founders / team members</h4>
+                <p>Add details for other team members if applicable.</p>
+              </div><button type="button" id="addMember" class="button button-outline button-small">+ Add
+                member</button>
+            </div>
+            <div id="teamMembers"></div>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset class="form-step" data-step="1">
+            <div class="form-step-heading"><span class="step-kicker">STEP 02</span>
+              <h3>Startup information</h3>
+              <p>Help us understand your idea, customers and current progress.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field full"><label for="startupName">Startup name <span
+                    class="required">*</span></label><input id="startupName" name="startupName" required
+                  placeholder="Enter your startup name"></div>
+              <div class="field full"><label for="pitch">One-line pitch <span class="required">*</span></label><input
+                  id="pitch" name="pitch" required maxlength="240" placeholder="Describe your startup in one sentence">
+              </div>
+              <div class="field full"><label for="problem">Problem statement <span
+                    class="required">*</span></label><textarea id="problem" name="problem" rows="3" required
+                  placeholder="What problem are you solving?"></textarea></div>
+              <div class="field full"><label for="solution">Proposed solution <span
+                    class="required">*</span></label><textarea id="solution" name="solution" rows="3" required
+                  placeholder="How does your startup solve this problem?"></textarea></div>
+              <div class="field"><label for="sector">Sector <span class="required">*</span></label><select id="sector"
+                  name="sector" required>
+                  <option value="">Choose a sector</option>
+                  <option>EdTech</option>
+                  <option>HealthTech</option>
+                  <option>AgriTech</option>
+                  <option>AI / ML</option>
+                  <option>FinTech</option>
+                  <option>CleanTech</option>
+                  <option>Cybersecurity</option>
+                  <option>Other</option>
+                </select></div>
+              <div class="field"><label for="stage">Startup stage <span class="required">*</span></label><select
+                  id="stage" name="stage" required>
+                  <option value="">Choose your stage</option>
+                  <option>Idea only</option>
+                  <option>Prototype</option>
+                  <option>MVP</option>
+                  <option>Generating revenue</option>
+                </select></div>
+              <div class="field full"><label for="customers">Target customers <span
+                    class="required">*</span></label><textarea id="customers" name="customers" rows="2" required
+                  placeholder="Who will use or purchase your product or service?"></textarea></div>
+              <div class="field full"><label for="usp">Unique selling proposition (USP) <span
+                    class="required">*</span></label><textarea id="usp" name="usp" rows="2" required
+                  placeholder="What makes your startup different?"></textarea></div>
+            </div>
+            <div class="subsection-heading"><span>↗</span>
+              <div>
+                <h4>Online links <span class="optional">(optional)</span></h4>
+                <p>Add links you already have. Leave blank if not available.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="pitchDeckUrl">Pitch deck / business plan URL</label><input
+                  id="pitchDeckUrl" name="pitchDeckUrl" type="url" placeholder="https://..."></div>
+              <div class="field"><label for="websiteUrl">Website / demo URL</label><input id="websiteUrl"
+                  name="websiteUrl" type="url" placeholder="https://..."></div>
+              <div class="field full"><label for="githubUrl">GitHub repository URL</label><input id="githubUrl"
+                  name="githubUrl" type="url" placeholder="https://github.com/..."></div>
+            </div>
+            <div class="subsection-heading"><span>▤</span>
+              <div>
+                <h4>Legal & registration status</h4>
+                <p>These details help the team understand your startup's current legal status.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="registrationStatus">Startup registration status <span
+                    class="required">*</span></label><select id="registrationStatus" name="registrationStatus" required>
+                  <option value="">Select status</option>
+                  <option value="Not registered">Not registered</option>
+                  <option value="Company">Company</option>
+                  <option value="LLP">LLP</option>
+                  <option value="Partnership">Partnership</option>
+                </select></div>
+              <div class="field"><label for="incorporationDate">Incorporation date</label><input id="incorporationDate"
+                  name="incorporationDate" type="date"></div>
+              <div class="field"><label for="dpiitStatus">DPIIT recognition status <span
+                    class="required">*</span></label><select id="dpiitStatus" name="dpiitStatus" required>
+                  <option value="">Select status</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>In process</option>
+                </select></div>
+              <div class="field hidden" id="dpiitNumberWrap"><label for="dpiitNumber">DPIIT certificate number <span
+                    class="required">*</span></label><input id="dpiitNumber" name="dpiitNumber"
+                  placeholder="Certificate number"></div>
+            </div>
+            <div class="subsection-heading"><span>📎</span>
+              <div>
+                <h4>Supporting documents <span class="optional">(as applicable)</span></h4>
+                <p>Only upload documents requested by the centre or relevant to your application.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="incorporationCert">Incorporation certificate</label><input
+                  id="incorporationCert" name="incorporationCert" type="file" accept=".pdf,.jpg,.jpeg,.png"></div>
+              <div class="field"><label for="dpiitCert">DPIIT certificate</label><input id="dpiitCert" name="dpiitCert"
+                  type="file" accept=".pdf,.jpg,.jpeg,.png"></div>
+              <div class="field full"><label for="pitchDeckFile">Pitch deck / business plan file
+                  (optional)</label><input id="pitchDeckFile" name="pitchDeckFile" type="file"
+                  accept=".pdf,.ppt,.pptx,.doc,.docx"></div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 3 -->
+          <fieldset class="form-step" data-step="2">
+            <div class="form-step-heading"><span class="step-kicker">STEP 03</span>
+              <h3>Requirements & funding</h3>
+              <p>Tell us what support you are looking for. Availability and approval are not guaranteed.</p>
+            </div>
+            <div class="subsection-heading"><span>⌂</span>
+              <div>
+                <h4>Workspace & incubation support</h4>
+                <p>Choose only the resources relevant to your startup.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="needsSpace">Do you require incubation space? <span
+                    class="required">*</span></label><select id="needsSpace" name="needsSpace" required>
+                  <option value="">Choose an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select></div>
+              <div class="field hidden" id="spaceTypeWrap"><label for="spaceType">Preferred space type <span
+                    class="required">*</span></label><select id="spaceType" name="spaceType">
+                  <option value="">Select space</option>
+                  <option>Desk</option>
+                  <option>Cabin</option>
+                  <option>Lab</option>
+                </select></div>
+              <div class="field hidden" id="seatsWrap"><label for="seats">Number of seats <span
+                    class="required">*</span></label><input id="seats" name="seats" type="number" min="1" max="500"
+                  placeholder="e.g. 3"></div>
+              <div class="field hidden" id="durationWrap"><label for="duration">Preferred duration
+                  (months)</label><input id="duration" name="duration" type="number" min="1" max="120"
+                  placeholder="e.g. 6"></div>
+              <div class="field"><label for="needsMentorship">Mentorship required? <span
+                    class="required">*</span></label><select id="needsMentorship" name="needsMentorship" required>
+                  <option value="">Choose an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select></div>
+              <div class="field"><label for="needsLegal">Legal / IP support required? <span
+                    class="required">*</span></label><select id="needsLegal" name="needsLegal" required>
+                  <option value="">Choose an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Not sure</option>
+                </select></div>
+              <div class="field full"><label for="equipment">Tools / equipment requirements</label><textarea
+                  id="equipment" name="equipment" rows="2"
+                  placeholder="Describe any tools, equipment or lab facilities needed"></textarea></div>
+              <div class="field full hidden" id="legalDetailsWrap"><label for="legalDetails">Legal / IP support
+                  details</label><textarea id="legalDetails" name="legalDetails" rows="2"
+                  placeholder="Briefly describe the assistance you need"></textarea></div>
+            </div>
+            <div class="subsection-heading"><span>▤</span>
+              <div>
+                <h4>Funding requirements</h4>
+                <p>Funding scheme and eligibility rules must be confirmed by the incubation centre.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field"><label for="needsFunding">Are you seeking funding? <span
+                    class="required">*</span></label><select id="needsFunding" name="needsFunding" required>
+                  <option value="">Choose an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select></div>
+              <div class="field hidden" id="fundingAmountWrap"><label for="fundingAmount">Estimated funding amount (₹)
+                  <span class="required">*</span></label><input id="fundingAmount" name="fundingAmount" type="number"
+                  min="0" step="1000" placeholder="e.g. 500000"></div>
+              <div class="field full hidden" id="fundUseWrap"><label for="fundUse">Intended use of funds <span
+                    class="required">*</span></label><select id="fundUse" name="fundUse">
+                  <option value="">Choose a purpose</option>
+                  <option>Prototype development</option>
+                  <option>Product development</option>
+                  <option>Marketing</option>
+                  <option>Equipment</option>
+                  <option>Other</option>
+                </select></div>
+              <div class="field"><label for="previousGrant">Have you received a government grant before? <span
+                    class="required">*</span></label><select id="previousGrant" name="previousGrant" required>
+                  <option value="">Choose an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select></div>
+              <div class="field hidden" id="previousGrantAmountWrap"><label for="previousGrantAmount">Previous grant
+                  amount (₹) <span class="required">*</span></label><input id="previousGrantAmount"
+                  name="previousGrantAmount" type="number" min="0" step="1000" placeholder="Amount received"></div>
+              <div class="field hidden" id="shareholdingWrap"><label for="shareholding">Indian promoters' shareholding
+                  (%)</label><input id="shareholding" name="shareholding" type="number" min="0" max="100" step="0.01"
+                  placeholder="0–100"></div>
+              <div class="field hidden" id="schemeWrap"><label for="scheme">Scheme preference</label><select id="scheme"
+                  name="scheme">
+                  <option value="">Select preference</option>
+                  <option>Startup India Seed Fund</option>
+                  <option>NIDHI</option>
+                  <option>Not sure</option>
+                </select></div>
+            </div>
+            <p class="policy-note compact"><strong>Funding note:</strong> Providing funding information is not a funding
+              application approval or promise. Confirm the exact scheme and eligibility requirements with the centre.
+            </p>
+            <div class="subsection-heading"><span>↗</span>
+              <div>
+                <h4>How did you hear about us?</h4>
+                <p>Optional feedback.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field full"><label for="referral">Referral source</label><select id="referral"
+                  name="referral">
+                  <option value="">Choose an option</option>
+                  <option>College / University</option>
+                  <option>Friend / Colleague</option>
+                  <option>Social media</option>
+                  <option>Website / Search</option>
+                  <option>Event / Workshop</option>
+                  <option>Other</option>
+                </select></div>
+            </div>
+          </fieldset>
+
+          <!-- REVIEW -->
+          <fieldset class="form-step" data-step="3">
+            <div class="form-step-heading"><span class="step-kicker">FINAL STEP</span>
+              <h3>Review your application</h3>
+              <p>Check your answers before submitting.</p>
+            </div>
+            <div id="reviewContent" class="review-content"></div>
+            <div class="declaration-box">
+              <label class="check-row"><input type="checkbox" id="declarationAccuracy" required><span>I confirm that the
+                  information provided in this application is accurate and complete. <span
+                    class="required">*</span></span></label>
+              <label class="check-row"><input type="checkbox" id="declarationTerms" required><span>I have read and agree
+                  to the <a href="#privacyNote">Terms & Conditions and Privacy Notice</a>. <span
+                    class="required">*</span></span></label>
+            </div>
+            <p id="privacyNote" class="field-hint">The centre should publish its approved privacy notice,
+              document-handling practices and contact details before collecting real applicant data.</p>
+            <div class="policy-note compact"><strong>Before you submit:</strong> This front-end demo validates and
+              prepares your application in the browser. It does not send data to the college or save uploaded files to a
+              server.</div>
+            <div id="submitMessage" class="submit-message hidden" role="status"></div>
+          </fieldset>
+
+          <div id="formError" class="form-error hidden" role="alert"></div>
+          <div class="form-actions">
+            <button type="button" id="backButton" class="button button-outline" disabled>← Back</button>
+            <span id="stepCounter" class="step-counter">Step 1 of 3</span>
+            <button type="button" id="nextButton" class="button button-primary">Next step →</button>
+            <button type="submit" id="submitButton" class="button button-primary hidden">Submit application ✓</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq section-wrap">
+      <div class="section-heading"><span class="eyebrow green">NEED HELP?</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <details>
+        <summary>Is registration free for MIT students?</summary>
+        <p>According to the current information provided, the application is free for MIT students.</p>
+      </details>
+      <details>
+        <summary>When do external applicants pay the fee?</summary>
+        <p>Any applicable fee is communicated after approval. Do not pay during form submission unless the centre
+          publishes a different approved process.</p>
+      </details>
+      <details>
+        <summary>Does registration guarantee funding?</summary>
+        <p>No. Funding depends on the scheme, eligibility requirements, selection process and availability.</p>
+      </details>
+      <details>
+        <summary>Can I apply if my startup is not registered?</summary>
+        <p>The form supports unregistered startups, but final incubation and scheme eligibility depends on the centre's
+          policy.</p>
+      </details>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
